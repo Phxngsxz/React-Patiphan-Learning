@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MyButton from './components/MyButton'
+import MyProfile from './components/MyProfile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,8 +34,8 @@ function App() {
     // React Fragment
     <>
       <h1>Welcome to my app</h1>
-      <p>My name is {user.firstName} {user.lastName}</p>
-      <img src={user.imgPic} width="150" height="150" alt={user.firstName}/>
+      <MyProfile data={user} />
+      {/* <img src={user.imgPic} width="150" height="150" alt={user.firstName}/> */}
       <p>{count}</p>
       <button onClick={handleInCreaseClick}>Increase</button>
       <button onClick={handleDeCreaseClick}>Decrease</button>
